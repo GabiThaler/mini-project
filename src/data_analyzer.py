@@ -68,9 +68,14 @@ class Analyzer:
                     if word.isalpha() and word.isupper():
                         count += 1
             self.upper[k]=count
-        print(self.upper)
 
 
 
 
 
+AA=Analyzer()
+AA.Count_biased()
+AA.count_worlds()
+AA.Finding_longest_tweet()
+AA.Find_10_most_commen_w()
+AA.count_uppercase_words()
