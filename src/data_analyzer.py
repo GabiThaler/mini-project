@@ -35,7 +35,32 @@ class Analyzer:
 
 
 
+    def Finding_longest_tweet(self):
+        top3={}
+        for k in self.new_df.keys():
+            temp_df = self.new_df[k]
+            temp_df["char_count"] = temp_df["Text"].str.len()
+            self.new_df[k] = temp_df
+            top3[k] = temp_df.sort_values(by="char_count", ascending=False).head(3)
+
+
+    def  Find_10_most_commen_w(self):
+        words={}
+        for k in self.new_df.keys():
+            for v in self.new_df[k]["Text"]:
+                for word in str(v).lower().split():
+                    if word in words:
+                        words[word]=words[word]+1
+                    else:
+                        words[word]=1
+        sorted_words = sorted(words.items(), key=lambda x: x[1], reverse=True)
+        words = sorted_words[:10]
+
+
+
 
 AA=Analyzer()
 AA.Count_biased()
 AA.count_worlds()
+AA.Finding_longest_tweet()
+AA.Find_10_most_commen_w()
