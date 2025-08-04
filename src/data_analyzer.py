@@ -35,6 +35,7 @@ class Analyzer:
 
 
 
+
 AA=Analyzer()
 AA.Count_biased()
 AA.count_worlds()
