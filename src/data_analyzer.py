@@ -75,9 +75,3 @@ class Analyzer:
 
 
 
-AA=Analyzer()
-AA.Count_biased()
-AA.count_worlds()
-AA.Finding_longest_tweet()
-AA.Find_10_most_commen_w()
-AA.count_uppercase_words()
