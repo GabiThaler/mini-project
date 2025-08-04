@@ -17,7 +17,6 @@ class Analyzer:
 
 
     def Count_biased(self):
-        pass
         self.typas=self.df[self.target_col].value_counts()
         for k in self.typas.index:
             self.amounts[k]=self.typas[k]
@@ -69,7 +68,6 @@ class Analyzer:
                     if word.isalpha() and word.isupper():
                         count += 1
             self.upper[k]=count
-        print(self.upper)
 
 
 
